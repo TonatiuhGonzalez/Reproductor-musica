@@ -24,12 +24,18 @@ namespace Reproductor_de_música
         {
             InitializeComponent();
             index = lista_canciones.Items.Count + 1;
+
+
             String path = @"C:\Users\Public\Music\Sample Music";
             string[] array1 = Directory.GetFiles(path,"*.mp3");
             foreach(string canción in array1)
             {
-                lista_canciones.Items.Add(canción);
+                int slash = canción.LastIndexOf("\\") + 1;
+                string str = canción.Substring(slash, canción.Length - slash);
+                lista_canciones.Items.Add(str);
             }
+
+
             lista_canciones.SelectedIndex = 0;
             botón_pausa.Enabled = false;
             botón_stop.Enabled = false;

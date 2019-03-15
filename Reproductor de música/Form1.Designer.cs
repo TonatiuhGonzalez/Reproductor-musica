@@ -91,7 +91,6 @@
             this.label_año.Name = "label_año";
             this.label_año.Size = new System.Drawing.Size(0, 13);
             this.label_año.TabIndex = 6;
-            this.label_año.Text = "a";
             // 
             // label_album
             // 
