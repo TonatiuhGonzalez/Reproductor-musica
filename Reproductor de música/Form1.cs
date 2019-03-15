@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Media;
 using WMPLib;
+using TagLib;
 
 namespace Reproductor_de_música
 {
@@ -31,6 +32,20 @@ namespace Reproductor_de_música
             lista_canciones.SelectedIndex = 0;
             botón_pausa.Enabled = false;
             botón_stop.Enabled = false;
+        }
+
+        public void Metadatos()
+        {
+            TagLib.File file = TagLib.File.Create(player.URL);
+            String artista = file.Tag.FirstPerformer;
+            String album = file.Tag.Album;
+            uint año = file.Tag.Year;
+            String género = file.Tag.FirstGenre;
+
+            label_artista.Text = artista;
+            label_album.Text = album;
+            label_año.Text = Convert.ToString(año);
+            label_genero.Text = género;
         }
 
         public void botón_inicio_Click(object sender, EventArgs e)
@@ -73,11 +88,12 @@ namespace Reproductor_de_música
         {
             player.URL = lista_canciones.GetItemText(lista_canciones.SelectedItem);
             player.controls.play();
+            Metadatos();
             botón_play.Enabled = false;
             botón_pausa.Enabled = true;
             botón_stop.Enabled = true;
             index_canción = player.URL;
-            label6.Text = index_canción;
+            label_año.Text = index_canción;
         }
 
         private void botón_stop_Click(object sender, EventArgs e)
@@ -99,5 +115,6 @@ namespace Reproductor_de_música
         {
             int index = lista_canciones.SelectedIndex;
         }
+
     }
 }

@@ -30,10 +30,10 @@
         {
             this.lista_canciones = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label_genero = new System.Windows.Forms.Label();
+            this.label_año = new System.Windows.Forms.Label();
+            this.label_album = new System.Windows.Forms.Label();
+            this.label_artista = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             // lista_canciones
             // 
             this.lista_canciones.FormattingEnabled = true;
-            this.lista_canciones.Location = new System.Drawing.Point(3, 3);
+            this.lista_canciones.Location = new System.Drawing.Point(9, 3);
             this.lista_canciones.Name = "lista_canciones";
             this.lista_canciones.Size = new System.Drawing.Size(426, 121);
             this.lista_canciones.TabIndex = 0;
@@ -61,56 +61,52 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label_genero);
+            this.groupBox1.Controls.Add(this.label_año);
+            this.groupBox1.Controls.Add(this.label_album);
+            this.groupBox1.Controls.Add(this.label_artista);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(21, 208);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(237, 100);
+            this.groupBox1.Size = new System.Drawing.Size(388, 100);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Metadatos";
             // 
-            // label5
+            // label_genero
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(84, 55);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Género";
+            this.label_genero.AutoSize = true;
+            this.label_genero.Location = new System.Drawing.Point(84, 55);
+            this.label_genero.Name = "label_genero";
+            this.label_genero.Size = new System.Drawing.Size(0, 13);
+            this.label_genero.TabIndex = 7;
             // 
-            // label6
+            // label_año
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(84, 42);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(26, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Año";
+            this.label_año.AutoSize = true;
+            this.label_año.Location = new System.Drawing.Point(84, 42);
+            this.label_año.Name = "label_año";
+            this.label_año.Size = new System.Drawing.Size(0, 13);
+            this.label_año.TabIndex = 6;
             // 
-            // label7
+            // label_album
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(84, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Album";
+            this.label_album.AutoSize = true;
+            this.label_album.Location = new System.Drawing.Point(84, 29);
+            this.label_album.Name = "label_album";
+            this.label_album.Size = new System.Drawing.Size(0, 13);
+            this.label_album.TabIndex = 5;
             // 
-            // label8
+            // label_artista
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(84, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Artista";
+            this.label_artista.AutoSize = true;
+            this.label_artista.Location = new System.Drawing.Point(84, 16);
+            this.label_artista.Name = "label_artista";
+            this.label_artista.Size = new System.Drawing.Size(0, 13);
+            this.label_artista.TabIndex = 4;
             // 
             // label4
             // 
@@ -190,7 +186,7 @@
             // 
             // botón_stop
             // 
-            this.botón_stop.Location = new System.Drawing.Point(12, 118);
+            this.botón_stop.Location = new System.Drawing.Point(21, 179);
             this.botón_stop.Name = "botón_stop";
             this.botón_stop.Size = new System.Drawing.Size(75, 23);
             this.botón_stop.TabIndex = 6;
@@ -200,7 +196,7 @@
             // 
             // botón_play
             // 
-            this.botón_play.Location = new System.Drawing.Point(93, 118);
+            this.botón_play.Location = new System.Drawing.Point(102, 179);
             this.botón_play.Name = "botón_play";
             this.botón_play.Size = new System.Drawing.Size(75, 23);
             this.botón_play.TabIndex = 7;
@@ -210,7 +206,7 @@
             // 
             // botón_pausa
             // 
-            this.botón_pausa.Location = new System.Drawing.Point(174, 118);
+            this.botón_pausa.Location = new System.Drawing.Point(183, 179);
             this.botón_pausa.Name = "botón_pausa";
             this.botón_pausa.Size = new System.Drawing.Size(75, 23);
             this.botón_pausa.TabIndex = 8;
@@ -225,16 +221,16 @@
             this.panel1.Controls.Add(this.botón_atras);
             this.panel1.Controls.Add(this.botón_siguiente);
             this.panel1.Controls.Add(this.botón_fin);
-            this.panel1.Location = new System.Drawing.Point(12, 147);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(467, 161);
+            this.panel1.Size = new System.Drawing.Size(435, 161);
             this.panel1.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 450);
+            this.ClientSize = new System.Drawing.Size(469, 316);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.botón_pausa);
             this.Controls.Add(this.botón_play);
@@ -257,10 +253,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label_genero;
+        private System.Windows.Forms.Label label_año;
+        private System.Windows.Forms.Label label_album;
+        private System.Windows.Forms.Label label_artista;
         private System.Windows.Forms.Button botón_inicio;
         private System.Windows.Forms.Button botón_atras;
         private System.Windows.Forms.Button botón_siguiente;
