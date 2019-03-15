@@ -37,14 +37,15 @@ namespace Reproductor_de_música
         public void Metadatos()
         {
             TagLib.File file = TagLib.File.Create(player.URL);
+
             String artista = file.Tag.FirstPerformer;
             String album = file.Tag.Album;
-            uint año = file.Tag.Year;
+            String año = Convert.ToString(file.Tag.Year);
             String género = file.Tag.FirstGenre;
 
             label_artista.Text = artista;
             label_album.Text = album;
-            label_año.Text = Convert.ToString(año);
+            label_año.Text = año;
             label_genero.Text = género;
         }
 
@@ -93,7 +94,6 @@ namespace Reproductor_de_música
             botón_pausa.Enabled = true;
             botón_stop.Enabled = true;
             index_canción = player.URL;
-            label_año.Text = index_canción;
         }
 
         private void botón_stop_Click(object sender, EventArgs e)
