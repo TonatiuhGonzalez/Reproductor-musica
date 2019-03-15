@@ -18,11 +18,12 @@ namespace Reproductor_de_música
     {
 
         WindowsMediaPlayer player = new WindowsMediaPlayer();
-        string index_canción;
+        int index;
 
         public Form1()
         {
             InitializeComponent();
+            index = lista_canciones.Items.Count + 1;
             String path = @"C:\Users\Public\Music\Sample Music";
             string[] array1 = Directory.GetFiles(path,"*.mp3");
             foreach(string canción in array1)
@@ -32,6 +33,7 @@ namespace Reproductor_de_música
             lista_canciones.SelectedIndex = 0;
             botón_pausa.Enabled = false;
             botón_stop.Enabled = false;
+            index = lista_canciones.Items.Count + 1;
         }
 
         public void Metadatos()
@@ -93,7 +95,7 @@ namespace Reproductor_de_música
             botón_play.Enabled = false;
             botón_pausa.Enabled = true;
             botón_stop.Enabled = true;
-            index_canción = player.URL;
+            index = lista_canciones.SelectedIndex;
         }
 
         private void botón_stop_Click(object sender, EventArgs e)
@@ -112,9 +114,15 @@ namespace Reproductor_de_música
         }
 
         private void lista_canciones_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int index = lista_canciones.SelectedIndex;
+        {            
+            if (lista_canciones.SelectedIndex != index)
+            {
+                botón_play.Enabled = true;
+            }
+            else
+            {
+                botón_play.Enabled = false;
+            }
         }
-
     }
 }
